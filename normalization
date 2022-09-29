@@ -1,7 +1,6 @@
-#we visualize heatmap to check in any outliners are present in our sample or any errors 
 
-setwd("C:/Users/admin/Documents")
-print(getwd())
+
+
 library(BiocManager)
 library(edgeR)
 library(ComplexHeatmap)
