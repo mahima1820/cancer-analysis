@@ -1,0 +1,30 @@
+
+library(matrixStats)
+library(ComplexHeatmap)
+function1=function(y){
+  matrixy=y
+
+ for (i in 1:ncol(y)) {
+ matrixy[,i] = (y[,i]/sum(y[,i]))*1000000
+   print(head(matrixy))
+   matrixy[,i]= log2(matrixy[,i] +1)
+    logfc=log2(matrixy+1)
+
+ }
+ return(matrixy)
+}
+y=read.csv("inputfile.csv",sep=",",header=T,row.names = 1)
+data=function1(y)
+
+data
+function2=function(data){
+  for (i in 1:ncol(data)){
+    zs = (data - rowMeans(data))/rowSds(as.matrix(data))[row(data)]
+    
+  }
+  zs[is.na(zs)]=0
+  zcs = as.matrix(zs)
+  return(Heatmap(zcs[1:50]))
+}
+function2(data)
+
