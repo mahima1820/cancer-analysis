@@ -50,3 +50,6 @@ print(var_tail)
 
 #heatmap
 heatmap(var_tail,cluster_rows=T,cluster_cols=T,column_labels=colnames(z_scores),scale='row',show_rownames=FALSE)
+
+![heat](https://user-images.githubusercontent.com/110675838/198820122-42f70b6d-82fe-4355-9f2c-67e05ca3a7eb.png)
+
